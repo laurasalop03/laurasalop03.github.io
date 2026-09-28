@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 website:
-  title: "Laura Salop"
+  title: "Laura Salas López"
   description: "Projects and research notes in quantitative finance, machine learning and optimization."
   site-url: "https://laurasalop03.github.io"
   navbar:
