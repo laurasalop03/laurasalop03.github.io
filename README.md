@@ -19,9 +19,7 @@ Free portfolio and notes site. GitHub builds and publishes it automatically on e
        git remote add origin https://github.com/laurasalop03/laurasalop03.github.io.git
        git push -u origin main
 
-3. In the repo on GitHub: Settings, then Pages. Under "Build and deployment", set Source to "Deploy from a branch", branch `gh-pages`, folder `/ (root)`. Save.
-
-   (The first push runs the Action, which creates the `gh-pages` branch. If it is not there yet, wait for the Action in the Actions tab to finish, then set this.)
+3. In the repo on GitHub: Settings, then Pages. Under "Build and deployment", set Source to "GitHub Actions". That is all (no branch to choose).
 
 4. Your site goes live at:
 
