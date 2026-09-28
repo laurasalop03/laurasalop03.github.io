@@ -1,0 +1,12 @@
+---
+title: "Notes"
+subtitle: "Short write ups from my thesis and quant learning"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+page-layout: full
+title-block-banner: false
+---

@@ -1,0 +1,46 @@
+---
+title: "Why this site exists, and how I will use it"
+description: "A short first note, and a template for the ones that follow."
+author: "Laura Salop"
+date: "2026-09-28"
+categories: [meta, thesis]
+---
+
+## The question
+
+I am building toward quantitative finance from a computer science and machine learning background. The gap I want to close is visible, hands on quant work: signals, backtests, risk and the reasoning behind them. This site is where I close it in public.
+
+## How I will write notes
+
+Every note follows the same four part shape, because it is the shape quant work is judged by:
+
+1. **Question**: what am I trying to find out, in one sentence.
+2. **Method**: the model or approach, with the math stated plainly.
+3. **Result**: what happened, with a number or a chart.
+4. **Limitations**: what I did not test, and where this would break.
+
+## Math renders natively
+
+Because notes are written in Quarto, I can state methods properly. For example, a simple estimate of daily Value at Risk at confidence level $\alpha$ under a normal assumption is
+
+$$
+\text{VaR}_\alpha = \mu - z_\alpha \, \sigma,
+$$
+
+where $\mu$ and $\sigma$ are the mean and standard deviation of returns and $z_\alpha$ is the standard normal quantile.
+
+## Code renders too
+
+```python
+import numpy as np
+
+returns = np.random.normal(0.0005, 0.01, 1000)
+alpha = 0.95
+z = 1.645  # standard normal quantile for 95%
+var_95 = returns.mean() - z * returns.std()
+print(f"1-day 95% VaR estimate: {var_95:.4f}")
+```
+
+## What comes next
+
+The first real notes will come straight out of my thesis and out of extending the [financial dashboard](../../projects.qmd): a proper backtest write up, a look at how the VaR assumption above fails on fat tailed returns, and a small study on one predictive signal.

@@ -1,0 +1,53 @@
+---
+title: "Projects"
+---
+
+Projects are ordered by relevance to quantitative work. Each links to the source on GitHub.
+
+## Financial dashboard
+
+Interactive dashboard for market analysis built in Python and Streamlit. Real time technical analysis, algorithmic trading backtesting, risk metrics (Value at Risk, Beta) and price forecasting with Prophet.
+
+Why it matters: it covers the full loop a quant cares about, signal, backtest, risk and forecast, in one working application.
+
+[Source on GitHub](https://github.com/laurasalop03/financial-dashboard)
+
+## Applied machine learning and deep learning
+
+A portfolio of applied ML and DL work: predictive regression, computer vision autoencoders and optimized neural networks.
+
+Why it matters: the same supervised and representation learning methods used here transfer directly to return prediction, feature construction and anomaly detection on financial data.
+
+[Source on GitHub](https://github.com/laurasalop03/applied-ml-and-deep-learning)
+
+## Combinatorial optimization and constraint satisfaction
+
+Constraint satisfaction and optimization models built with MiniZinc, with symmetry breaking, search space pruning and performance benchmarking.
+
+Why it matters: portfolio construction and allocation are constrained optimization problems, and this shows comfort with modelling and solving them rigorously.
+
+[Source on GitHub](https://github.com/laurasalop03/combinatorial-optimization-csp)
+
+## Advanced adversarial search
+
+An intelligent agent that plays a deterministic game variant using advanced adversarial search techniques.
+
+Why it matters: sequential decision making under an adversary, with search, pruning and evaluation functions, is close in spirit to strategy under uncertainty.
+
+[Source on GitHub](https://github.com/laurasalop03/advanced-adversarial-search)
+
+## Automated planning engine (PDDL)
+
+A planning engine in the Fast Downward tradition, with A star search optimization, heuristic pruning and state space reduction.
+
+Why it matters: heuristic search and state space reasoning are core algorithmic tools, and this demonstrates them end to end.
+
+[Source on GitHub](https://github.com/laurasalop03/pddl-automated-planning-engine)
+
+## Custom language compiler
+
+A compiler for a custom language built in C with Flex and Bison: lexical and semantic analysis, AST generation and code translation.
+
+Why it matters: low level rigor and careful systems work, useful when performance and correctness of numerical pipelines matter.
+
+[Source on GitHub](https://github.com/laurasalop03/custom-language-compiler)

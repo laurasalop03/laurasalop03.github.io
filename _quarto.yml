@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Laura Salop"
+  description: "Projects and research notes in quantitative finance, machine learning and optimization."
+  site-url: "https://laurasalop03.github.io"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: Projects
+      - href: blog/index.qmd
+        text: Notes
+    right:
+      - icon: github
+        href: https://github.com/laurasalop03
+        aria-label: GitHub
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/laura-salas-l%C3%B3pez-3ba7442ba"
+        aria-label: LinkedIn
+  page-footer:
+    center: "Built with Quarto. Source on GitHub."
+
+format:
+  html:
+    theme:
+      - cosmo
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+
+execute:
+  freeze: auto
