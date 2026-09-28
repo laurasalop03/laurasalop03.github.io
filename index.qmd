@@ -1,5 +1,5 @@
 ---
-title: "Laura Salop"
+title: "Laura Salas López"
 subtitle: "Quantitative methods, machine learning and optimization"
 about:
   template: trestles
@@ -16,11 +16,11 @@ about:
       href: "mailto:laurasalop@hotmail.com"
 ---
 
-I am a computer science student working toward quantitative finance. My background is in machine learning, optimization and algorithms, and I am now applying those methods to markets and risk.
+I am a computer science and math student working toward quantitative finance. My background is in machine learning, math and algorithms, and I am now applying those methods to markets and risk.
 
 This site collects two things:
 
 - **Projects**: things I have built, from an interactive financial dashboard with backtesting and risk metrics to work in deep learning and combinatorial optimization.
-- **Notes**: shorter write ups of ideas, methods and results I discover while working on my thesis. Each note states the question, the method, the result and the limitations.
+- **Notes**: shorter write ups of ideas, methods and results I discover while working on my thesis or different projects. Each note states the question, the method, the result and the limitations.
 
 If you are here to gauge whether I can do quantitative work, the [Projects](projects.qmd) page is the fastest read, and the [Notes](blog/index.qmd) show how I think through a problem.
