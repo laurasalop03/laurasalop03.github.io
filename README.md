@@ -1,54 +1,52 @@
-# Personal site (Quarto + GitHub Pages)
+# laurasalop03.github.io
 
-Free portfolio and notes site. GitHub builds and publishes it automatically on every push, so you do not need to install anything locally.
+Source for my personal site: **https://laurasalop03.github.io**
 
-## One time setup
+A portfolio and a set of notes documenting my move into quantitative finance from a computer science and machine learning background. Projects, plus short technical write ups from my thesis and quant learning.
 
-1. On GitHub, create a new PUBLIC repository named exactly:
+## Built with
 
-       laurasalop03.github.io
+- [Quarto](https://quarto.org) for the site and for rendering notebooks, code and LaTeX math.
+- GitHub Pages for hosting (free).
+- GitHub Actions to build and deploy automatically on every push, so no local tooling is required.
 
-   Do not add a README or .gitignore in the GitHub form (this folder already has them).
+## Structure
 
-2. From this folder, push it up:
+```
+index.qmd            Landing page and short bio
+projects.qmd         Selected projects, ordered by relevance to quant work
+blog/
+  index.qmd          Notes listing (auto-generated)
+  posts/*.qmd        Individual notes
+_quarto.yml          Site configuration (title, navigation, theme)
+styles.css           Small style overrides
+.github/workflows/   Build and deploy pipeline
+```
 
-       git init
-       git add .
-       git commit -m "Initial site"
-       git branch -M main
-       git remote add origin https://github.com/laurasalop03/laurasalop03.github.io.git
-       git push -u origin main
+## Adding a note
 
-3. In the repo on GitHub: Settings, then Pages. Under "Build and deployment", set Source to "GitHub Actions". That is all (no branch to choose).
+Create a file under `blog/posts/`, for example `blog/posts/my-topic.qmd`:
 
-4. Your site goes live at:
+```yaml
+---
+title: "My topic"
+date: "2026-10-05"
+categories: [backtest, thesis]
+---
+```
 
-       https://laurasalop03.github.io
+Write below the header in Markdown. Code blocks and LaTeX math (`$...$`) render directly. Commit and push:
 
-   (allow a few minutes the first time)
+```bash
+git add . && git commit -m "New note" && git push
+```
 
-## Add a new note later
+The site rebuilds and redeploys automatically in about a minute.
 
-Add one file under `blog/posts/`, for example `blog/posts/my-backtest.qmd`, with a header like:
+## Editing locally (optional)
 
-    ---
-    title: "My backtest write up"
-    date: "2026-10-05"
-    categories: [backtest, thesis]
-    ---
+Only if you want to preview before pushing: install the [Quarto CLI](https://quarto.org/docs/get-started/) and run `quarto preview` in this folder. Otherwise, editing files directly in the GitHub web UI works too, since the build runs in the cloud.
 
-Then:
+## Working from more than one computer
 
-    git add . && git commit -m "New note" && git push
-
-The Action rebuilds and republishes automatically. You can also add or edit files directly in the GitHub web UI and it publishes the same way.
-
-## Things to personalize
-
-- Email and LinkedIn are already filled in.
-- `index.qmd`: add a profile photo (put `profile.jpg` in this folder and add `image: profile.jpg` under the `about:` block).
-- `projects.qmd`: tune the wording.
-
-## Preview locally (optional)
-
-Only if you want to see it before pushing: install the Quarto CLI from quarto.org, then run `quarto preview` in this folder.
+The GitHub repo is the source of truth. On any machine, clone once, then `git pull` before editing and `git push` after. Each machine authenticates to GitHub separately (an SSH key or access token).
