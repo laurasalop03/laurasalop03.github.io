@@ -24,3 +24,17 @@ This site collects two things:
 - **Notes**: shorter write ups of ideas, methods and results I discover while working on my thesis or different projects. Each note states the question, the method, the result and the limitations.
 
 If you are here to gauge whether I can do quantitative work, the [Projects](projects.qmd) page is the fastest read, and the [Notes](blog/index.qmd) show how I think through a problem.
+
+## Featured
+
+::: {.card .mb-3}
+::: {.card-body}
+##### Financial Dashboard, live
+
+An interactive dashboard for market analysis: technical analysis, strategy backtesting, risk metrics (Value at Risk, Beta) and price forecasting. It runs live in the browser.
+
+[Open the project](projects/financial-dashboard.qmd){.btn .btn-primary .btn-sm} &nbsp; [Launch the live app](https://my-financial-dashboard.streamlit.app){.btn .btn-outline-secondary .btn-sm}
+:::
+:::
+
+*(A featured note will go here once the first one is published.)*
