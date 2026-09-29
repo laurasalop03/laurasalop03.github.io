@@ -1,9 +1,8 @@
 ---
 title: "Why this site exists, and how I will use it"
 description: "A short first note, and a template for the ones that follow."
-author: "Laura Salop"
+author: "Laura Salas López"
 date: "2026-09-28"
-categories: [meta, thesis]
 ---
 
 ## The question
