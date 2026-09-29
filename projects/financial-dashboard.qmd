@@ -1,9 +1,9 @@
 ---
 title: "Financial Dashboard"
-subtitle: "Interactive market analysis: backtesting, risk metrics and forecasting"
+subtitle: "Interactive market analysis: technical analysis, backtesting, risk and forecasting"
 ---
 
-An interactive dashboard built in Python and Streamlit. It covers the full loop a quant cares about: pull market data, run technical analysis, backtest a trading strategy, measure risk (Value at Risk, Beta) and forecast prices with Prophet.
+An interactive dashboard built in Python and Streamlit for stock market analysis, quantitative finance and algorithmic trading simulation. It pulls real market data, runs technical analysis, backtests a strategy, measures risk against the market, and forecasts prices.
 
 ```{=html}
 <p>
@@ -19,7 +19,7 @@ An interactive dashboard built in Python and Streamlit. It covers the full loop 
 
 ## Try it here
 
-The live app is embedded below. It runs on free hosting, so if it has been idle it may take a few seconds to wake up.
+The live app is embedded below. It runs on free hosting, so if it has been idle it may take a few seconds to wake up. A good first test: enter a ticker such as `AAPL`, then explore the technical, risk and forecasting tabs.
 
 ```{=html}
 <iframe
@@ -33,15 +33,41 @@ The live app is embedded below. It runs on free hosting, so if it has been idle 
 
 ## What it does
 
-- **Technical analysis**: price series with common indicators.
-- **Backtesting**: run a strategy over historical data and inspect the equity curve.
-- **Risk metrics**: Value at Risk and Beta, to size and contextualize exposure.
-- **Forecasting**: short horizon price forecasts using Prophet.
+**General summary**
+
+- Real time historical data via Yahoo Finance (`yfinance`).
+- Performance metrics: total return, annualized volatility, current prices.
+- Relative performance comparison and interactive candlestick charts.
+
+**Technical analysis and strategy**
+
+- Moving averages (SMA 50 and 200) and drawdown visualization.
+- Automatic detection of Golden Cross (bullish) and Death Cross (bearish) signals.
+- Backtesting of the SMA strategy against a buy and hold benchmark, with initial capital management.
+
+**Risk and statistics**
+
+- Market exposure: Alpha, Beta and 95% Value at Risk, measured against the S&P 500.
+- Distribution analysis: actual return distribution compared to a normal distribution.
+- Correlation matrix heatmap for analyzing diversification.
+
+**Forecasting**
+
+- Time series price prediction using Facebook Prophet, with confidence intervals.
+
+## Why it is relevant to quant work
+
+This is the full loop a quant cares about in one working application: get data, form a signal, backtest it against a benchmark, quantify the risk (VaR, Beta, Alpha) and forecast forward. It also confronts a real quant subtlety, comparing the empirical return distribution against the normal assumption that many risk models rely on.
 
 ## How it is built
 
 - **Streamlit** for the interface and interactivity.
-- **Python** (pandas, numpy) for the data and computation, in `logic.py`.
+- **Python** (pandas, numpy, scipy) for data and computation, with the analytics in `logic.py`.
+- **Plotly** for interactive charts, **yfinance** for data, **Prophet** for forecasting.
 - **`dashboard.py`** as the app entry point.
 
 [Full source on GitHub](https://github.com/laurasalop03/financial-dashboard)
+
+::: {.callout-note appearance="simple"}
+For educational purposes only. Not financial advice. Past performance does not indicate future results.
+:::

@@ -1,26 +1,23 @@
 ---
 title: "Automated Planning Engine (PDDL)"
-subtitle: "Heuristic search planning in the Fast Downward tradition"
+subtitle: "Heuristic search planning with aggressive state-space reduction"
 ---
 
-A planning engine that solves PDDL problems, with A* search and heuristics to keep the search tractable.
+A PDDL based planning engine for complex multi-agent logistics and scheduling problems, solved with the Fast Downward planning system. The focus is on taming combinatorial explosions through heuristic search and strict state-space reduction. Built for the Intelligent Systems Techniques course (Técnicas de los Sistemas Inteligentes, 2025-26) of the Computer Science and Mathematics double degree at the University of Granada.
 
 [View source on GitHub](https://github.com/laurasalop03/pddl-automated-planning-engine){.btn .btn-outline-secondary}
 
-## What it covers
+## Algorithmic highlights
 
-- **A\* search optimization**: finding optimal plans with an informed search.
-- **Heuristic pruning**: using heuristics to avoid exploring hopeless states.
-- **State space reduction**: shrinking the problem so it can be solved in reasonable time.
+- **Symmetry breaking**: enforced lexicographical ordering between interchangeable agents to cut exponential branching in multi-agent states.
+- **Dimensionality reduction**: grouped individual agents into a single macro-entity for traversal actions, reducing action parameters from 7 to 2. This cut $A^*$ search time from nearly 12 minutes (698 seconds) to under 1 minute on complex states.
+- **Axiom and quantifier optimization**: redesigned the domain to avoid existential quantifiers in goal states, triggering direct boolean predicates instead. This prevented derived axioms and kept the model compatible with optimal heuristics such as `seq-opt-lmcut`.
+- **Anytime cost optimization**: custom metric functions for non-uniform traversal weights, using `seq-sat-lama-2011` to find valid plans quickly and then iteratively minimize total cost.
 
 ## Why it is relevant to quant work
 
-Heuristic search and state space reasoning are core algorithmic tools. This project demonstrates them end to end on a hard combinatorial problem.
+This is optimization under combinatorial explosion, and the headline result (a roughly 12x speedup, from 698 seconds to under a minute, by reformulating the model) is exactly the kind of problem reformulation that separates a tractable quant model from an intractable one. Choosing the right heuristic and encoding is often worth more than raw compute.
 
 ## Tech
 
-PDDL, in the Fast Downward tradition.
-
-::: {.callout-note}
-More detail coming: the heuristics used and the problems solved.
-:::
+PDDL, Fast Downward, $A^*$ search, LM-cut heuristics, LAMA-2011.

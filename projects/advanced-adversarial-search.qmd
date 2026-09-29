@@ -1,26 +1,27 @@
 ---
-title: "Advanced Adversarial Search"
-subtitle: "A game-playing agent under an adversary"
+title: "ParCheckers AI: Advanced Adversarial Search"
+subtitle: "A hybrid alpha-beta agent under strict time and node budgets"
 ---
 
-An intelligent agent that plays a deterministic variant of Parchís using advanced adversarial search techniques, built in C++.
+An intelligent agent that plays ParCheckers, a deterministic variant of Parchís, using advanced adversarial search. The engine must decide within a 60 second and 2.5 million node budget per move, which drives every optimization below. Built for the Artificial Intelligence course (2024-25) at the University of Granada.
 
 [View source on GitHub](https://github.com/laurasalop03/advanced-adversarial-search){.btn .btn-outline-secondary}
 
-## What it covers
+## Search strategy: hybrid alpha-beta
 
-- **Adversarial search**: choosing moves against an opponent who plays to win.
-- **Search with pruning**: exploring the game tree efficiently.
-- **Evaluation functions**: scoring positions to guide the search when full lookahead is impossible.
+- **Probabilistic pruning with dynamic epsilon**: prunes branches even when `alpha < beta`, using a tolerance threshold that varies between 5 and 20 and tightens as the window narrows.
+- **Move ordering**: root children are sorted before exploration to maximize pruning. A heavier, more strategic heuristic is used at the root, while a faster one is used at the leaves.
+- **Dynamic depth**: search depth adapts to the branching factor, starting from a base depth of 6 and adjusting by one according to how complex the turn is.
+
+## Heuristics
+
+- **Fast evaluation heuristic** (leaf nodes, called roughly 800k times per game): rewards pieces in the goal and safe zones, penalizes pieces at home, and squares distances to the goal so the agent moves the whole group forward instead of abandoning a straggler. Values are normalized to 0 to 100 for consistent weighting.
+- **Sorting heuristic** (root only, more expensive): threat detection over the 20 tiles behind each piece, rewards for final stretch approaches, and strong reward or penalty for capturing or being captured.
 
 ## Why it is relevant to quant work
 
-Sequential decision making against an adversary, with search, pruning and hand designed evaluation, is close in spirit to reasoning about strategy under uncertainty.
+This is sequential decision making against an adversary under a hard latency budget. The core tensions, pruning aggressively without discarding good options, ordering candidates to act on the best first, and spending compute where it matters most, are the same tensions in fast strategy and execution problems.
 
-## Tech
+## Tech and structure
 
-C++.
-
-::: {.callout-note}
-More detail coming: the search algorithm, the evaluation function, and how it performs.
-:::
+C++ with the SFML library. The decision logic lives in `AIPlayer` (the `think()` method, the alpha-beta search and the heuristics); `Parchis` implements the game engine and rules.

@@ -1,26 +1,38 @@
 ---
 title: "Applied Machine Learning and Deep Learning"
-subtitle: "Predictive regression, computer vision and neural networks"
+subtitle: "Supervised estimation, unsupervised segmentation and generative networks"
 ---
 
-A portfolio of applied machine learning and deep learning work, built in Python with Jupyter notebooks.
+A portfolio of machine learning and deep learning models spanning supervised estimation, unsupervised segmentation and generative neural networks. Built for the Machine Learning course (Aprendizaje Automático, 2025-26) of the Computer Science and Mathematics double degree at the University of Granada.
 
 [View source on GitHub](https://github.com/laurasalop03/applied-ml-and-deep-learning){.btn .btn-outline-secondary}
 
 ## What it covers
 
-- **Predictive regression**: building and evaluating models that predict a continuous target.
-- **Computer vision autoencoders**: learning compressed representations of images.
-- **Optimized neural networks**: training and tuning networks for better performance.
+**Supervised learning**
+
+- Multi-class classification and continuous regression, applied to predicting hardware pricing and concrete compressive strength.
+- Emphasis on feature engineering and mitigating multicollinearity.
+
+**Unsupervised learning**
+
+- K-Means clustering for customer segmentation.
+- Association rule mining to map transactional dependencies in market basket data.
+
+**Deep learning (vision and language)**
+
+- Convolutional autoencoders that isolate signal from Gaussian noise in images.
+- Dense neural networks (MLP) for binary sentiment analysis of variable length text.
+
+## Engineering highlights
+
+- **Hyperparameter optimization**: manual grid search over learning rates, batch sizes and network depth, balancing model capacity against early overfitting.
+- **Data sanitization**: interquartile range (IQR) outlier removal and `StandardScaler` normalization, to keep distance based clustering meaningful and gradient descent stable.
 
 ## Why it is relevant to quant work
 
-The same supervised and representation learning methods transfer directly to quantitative finance: return prediction, feature construction from raw market data, and anomaly detection.
+Return prediction is regression, regime and client segmentation are clustering, and denoising autoencoders are a direct analogue of separating signal from noise in financial series. The discipline shown here, careful feature engineering, outlier handling and honest overfitting control, is exactly what quant modelling demands.
 
 ## Tech
 
-Python, Jupyter, standard ML and DL libraries.
-
-::: {.callout-note}
-More detail and result figures coming. I will add specific models, datasets and metrics.
-:::
+Python, TensorFlow, Keras, scikit-learn, NumPy, Pandas.
