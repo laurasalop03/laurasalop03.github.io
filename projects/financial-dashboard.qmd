@@ -1,0 +1,47 @@
+---
+title: "Financial Dashboard"
+subtitle: "Interactive market analysis: backtesting, risk metrics and forecasting"
+---
+
+An interactive dashboard built in Python and Streamlit. It covers the full loop a quant cares about: pull market data, run technical analysis, backtest a trading strategy, measure risk (Value at Risk, Beta) and forecast prices with Prophet.
+
+```{=html}
+<p>
+  <a class="btn btn-primary btn-lg" href="https://my-financial-dashboard.streamlit.app" target="_blank" rel="noopener">
+    Launch the live demo
+  </a>
+  &nbsp;
+  <a class="btn btn-outline-secondary btn-lg" href="https://github.com/laurasalop03/financial-dashboard" target="_blank" rel="noopener">
+    View source
+  </a>
+</p>
+```
+
+## Try it here
+
+The live app is embedded below. It runs on free hosting, so if it has been idle it may take a few seconds to wake up.
+
+```{=html}
+<iframe
+  src="https://my-financial-dashboard.streamlit.app/?embed=true"
+  width="100%"
+  height="720"
+  style="border:1px solid #ddd; border-radius:8px;"
+  loading="lazy">
+</iframe>
+```
+
+## What it does
+
+- **Technical analysis**: price series with common indicators.
+- **Backtesting**: run a strategy over historical data and inspect the equity curve.
+- **Risk metrics**: Value at Risk and Beta, to size and contextualize exposure.
+- **Forecasting**: short horizon price forecasts using Prophet.
+
+## How it is built
+
+- **Streamlit** for the interface and interactivity.
+- **Python** (pandas, numpy) for the data and computation, in `logic.py`.
+- **`dashboard.py`** as the app entry point.
+
+[Full source on GitHub](https://github.com/laurasalop03/financial-dashboard)

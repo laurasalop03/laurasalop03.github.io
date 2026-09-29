@@ -10,7 +10,7 @@ Interactive dashboard for market analysis built in Python and Streamlit. Real ti
 
 Why it matters: it covers the full loop a quant cares about, signal, backtest, risk and forecast, in one working application.
 
-[Source on GitHub](https://github.com/laurasalop03/financial-dashboard)
+[See details and live demo](projects/financial-dashboard.qmd) | [Source on GitHub](https://github.com/laurasalop03/financial-dashboard)
 
 ## Applied machine learning and deep learning
 
