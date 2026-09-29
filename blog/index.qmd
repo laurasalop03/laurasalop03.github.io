@@ -1,6 +1,6 @@
 ---
 title: "Notes"
-subtitle: "Short write ups from my thesis and quant learning"
+subtitle: "Short write ups from my thesis and learnings"
 listing:
   contents: posts
   sort: "date desc"
