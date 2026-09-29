@@ -1,0 +1,27 @@
+---
+title: "Combinatorial Optimization and Constraint Satisfaction"
+subtitle: "Modelling and solving with MiniZinc"
+---
+
+Constraint satisfaction and optimization models built with MiniZinc, with an emphasis on making the solver efficient.
+
+[View source on GitHub](https://github.com/laurasalop03/combinatorial-optimization-csp){.btn .btn-outline-secondary}
+
+## What it covers
+
+- **Constraint modelling**: expressing problems as constraint satisfaction and optimization models.
+- **Symmetry breaking**: removing equivalent solutions to shrink the search.
+- **Search space pruning**: cutting branches that cannot lead to better solutions.
+- **Performance benchmarking**: measuring how modelling choices affect solve time.
+
+## Why it is relevant to quant work
+
+Portfolio construction and allocation are constrained optimization problems. This project shows comfort with formulating and solving them rigorously, and with reasoning about solver performance.
+
+## Tech
+
+MiniZinc.
+
+::: {.callout-note}
+More detail coming: the specific problems modelled and the benchmark results.
+:::

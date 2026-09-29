@@ -1,0 +1,26 @@
+---
+title: "Automated Planning Engine (PDDL)"
+subtitle: "Heuristic search planning in the Fast Downward tradition"
+---
+
+A planning engine that solves PDDL problems, with A* search and heuristics to keep the search tractable.
+
+[View source on GitHub](https://github.com/laurasalop03/pddl-automated-planning-engine){.btn .btn-outline-secondary}
+
+## What it covers
+
+- **A\* search optimization**: finding optimal plans with an informed search.
+- **Heuristic pruning**: using heuristics to avoid exploring hopeless states.
+- **State space reduction**: shrinking the problem so it can be solved in reasonable time.
+
+## Why it is relevant to quant work
+
+Heuristic search and state space reasoning are core algorithmic tools. This project demonstrates them end to end on a hard combinatorial problem.
+
+## Tech
+
+PDDL, in the Fast Downward tradition.
+
+::: {.callout-note}
+More detail coming: the heuristics used and the problems solved.
+:::

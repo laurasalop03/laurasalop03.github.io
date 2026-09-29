@@ -1,0 +1,26 @@
+---
+title: "Advanced Adversarial Search"
+subtitle: "A game-playing agent under an adversary"
+---
+
+An intelligent agent that plays a deterministic variant of Parchís using advanced adversarial search techniques, built in C++.
+
+[View source on GitHub](https://github.com/laurasalop03/advanced-adversarial-search){.btn .btn-outline-secondary}
+
+## What it covers
+
+- **Adversarial search**: choosing moves against an opponent who plays to win.
+- **Search with pruning**: exploring the game tree efficiently.
+- **Evaluation functions**: scoring positions to guide the search when full lookahead is impossible.
+
+## Why it is relevant to quant work
+
+Sequential decision making against an adversary, with search, pruning and hand designed evaluation, is close in spirit to reasoning about strategy under uncertainty.
+
+## Tech
+
+C++.
+
+::: {.callout-note}
+More detail coming: the search algorithm, the evaluation function, and how it performs.
+:::

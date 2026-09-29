@@ -1,0 +1,27 @@
+---
+title: "Custom Language Compiler"
+subtitle: "A compiler built from scratch in C with Flex and Bison"
+---
+
+A compiler for a custom language, built in C using Flex and Bison, implementing the full front to back pipeline.
+
+[View source on GitHub](https://github.com/laurasalop03/custom-language-compiler){.btn .btn-outline-secondary}
+
+## What it covers
+
+- **Lexical analysis**: tokenizing source code with Flex.
+- **Semantic analysis**: checking that programs are well formed.
+- **AST generation**: building an abstract syntax tree.
+- **Code translation**: turning the tree into output code.
+
+## Why it is relevant to quant work
+
+Building a compiler demands low level rigor and careful, correct systems work, the same discipline needed when performance and correctness of numerical pipelines matter.
+
+## Tech
+
+C, Flex, Bison.
+
+::: {.callout-note}
+More detail coming: the language grammar and the translation pipeline.
+:::

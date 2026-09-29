@@ -18,7 +18,7 @@ A portfolio of applied ML and DL work: predictive regression, computer vision au
 
 Why it matters: the same supervised and representation learning methods used here transfer directly to return prediction, feature construction and anomaly detection on financial data.
 
-[Source on GitHub](https://github.com/laurasalop03/applied-ml-and-deep-learning)
+[Details](projects/applied-ml-and-deep-learning.qmd) | [Source on GitHub](https://github.com/laurasalop03/applied-ml-and-deep-learning)
 
 ## Combinatorial optimization and constraint satisfaction
 
@@ -26,7 +26,7 @@ Constraint satisfaction and optimization models built with MiniZinc, with symmet
 
 Why it matters: portfolio construction and allocation are constrained optimization problems, and this shows comfort with modelling and solving them rigorously.
 
-[Source on GitHub](https://github.com/laurasalop03/combinatorial-optimization-csp)
+[Details](projects/combinatorial-optimization-csp.qmd) | [Source on GitHub](https://github.com/laurasalop03/combinatorial-optimization-csp)
 
 ## Advanced adversarial search
 
@@ -34,7 +34,7 @@ An intelligent agent that plays a deterministic game variant using advanced adve
 
 Why it matters: sequential decision making under an adversary, with search, pruning and evaluation functions, is close in spirit to strategy under uncertainty.
 
-[Source on GitHub](https://github.com/laurasalop03/advanced-adversarial-search)
+[Details](projects/advanced-adversarial-search.qmd) | [Source on GitHub](https://github.com/laurasalop03/advanced-adversarial-search)
 
 ## Automated planning engine (PDDL)
 
@@ -42,7 +42,7 @@ A planning engine in the Fast Downward tradition, with A star search optimizatio
 
 Why it matters: heuristic search and state space reasoning are core algorithmic tools, and this demonstrates them end to end.
 
-[Source on GitHub](https://github.com/laurasalop03/pddl-automated-planning-engine)
+[Details](projects/pddl-automated-planning-engine.qmd) | [Source on GitHub](https://github.com/laurasalop03/pddl-automated-planning-engine)
 
 ## Custom language compiler
 
@@ -50,4 +50,4 @@ A compiler for a custom language built in C with Flex and Bison: lexical and sem
 
 Why it matters: low level rigor and careful systems work, useful when performance and correctness of numerical pipelines matter.
 
-[Source on GitHub](https://github.com/laurasalop03/custom-language-compiler)
+[Details](projects/custom-language-compiler.qmd) | [Source on GitHub](https://github.com/laurasalop03/custom-language-compiler)

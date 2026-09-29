@@ -21,6 +21,9 @@ website:
       - icon: linkedin
         href: "https://www.linkedin.com/in/laura-salas-l%C3%B3pez-3ba7442ba"
         aria-label: LinkedIn
+  search:
+    location: navbar
+    type: overlay
   page-footer:
     center: "Built with Quarto. Source on GitHub."
 
