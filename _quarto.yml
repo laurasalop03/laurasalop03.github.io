@@ -32,7 +32,8 @@ website:
 format:
   html:
     theme:
-      - cosmo
+       light: cosmo
+       dark: cyborg
     css: styles.css
     toc: true
     code-copy: true
