@@ -3,6 +3,7 @@ title: "Laura Salas López"
 subtitle: "Quantitative methods, machine learning and optimization"
 about:
   template: trestles
+  image: assets/profile.jpg
   image-shape: round
   links:
     - icon: github
