@@ -1,0 +1,47 @@
+---
+title: "About me"
+---
+
+I am a computer science and mathematics student moving toward quantitative finance. My foundation is in machine learning, optimization and algorithms, and I am now focused on applying those tools to markets, risk and trading.
+
+## Background
+
+I am studying the **Doble Grado en Ingeniería Informática y Matemáticas** (double degree in Computer Science and Mathematics) at the **University of Granada**, expected to finish in **June 2027**. The combination gives me both the mathematical grounding and the engineering skill that quantitative work demands.
+
+My coursework and projects span machine learning and deep learning, combinatorial optimization, search and planning, and low level systems (I built a compiler from scratch). Alongside that I build quantitative finance projects, most notably an interactive [financial dashboard](projects/financial-dashboard.qmd) with backtesting, risk metrics and forecasting.
+
+## Experience
+
+### Software Development Engineer Intern, Amazon
+
+*Amazon Business, Homepage team. Summer 2026, three month internship.*
+
+During my internship I worked on the Amazon Business homepage, helping modernize a customer facing UI widget by migrating it from a legacy rendering system to a modular, reusable component framework for both desktop and mobile. I built the widget in the new framework, backed by tests, took part in code reviews, and used A/B testing to release changes safely and measure their impact. Beyond the technical side, I grew a lot in reading large codebases, owning a project end to end, and collaborating within an engineering team.
+
+## What I am working toward
+
+A role in quantitative finance where I can combine rigorous modelling with real engineering. I use this site to close the gap between my current background and hands on quant work, by publishing projects and short technical notes as I go.
+
+## Skills
+
+- **Programming**: Python, C, C++.
+- **Quantitative and data**: pandas, numpy, scipy, backtesting, risk metrics (VaR, Beta), time series forecasting.
+- **Machine learning**: regression, neural networks, autoencoders.
+- **Optimization and search**: constraint satisfaction (MiniZinc), heuristic search, planning (PDDL).
+- **Mathematics**: the analytical foundation from a joint mathematics degree.
+
+## Languages
+
+- **Spanish**: native
+- **English**: fluent
+- **German**: basic to intermediate
+
+## Beyond work
+
+Outside of study and code I stay active with sports, music and reading, and I follow financial markets closely, which is part of what draws me toward quantitative finance.
+
+## Get in touch
+
+- GitHub: [laurasalop03](https://github.com/laurasalop03)
+- LinkedIn: [Laura Salas López](https://www.linkedin.com/in/laura-salas-l%C3%B3pez-3ba7442ba)
+- Email: [laurasalop@hotmail.com](mailto:laurasalop@hotmail.com)
