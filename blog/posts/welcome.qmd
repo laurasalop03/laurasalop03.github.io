@@ -1,8 +1,9 @@
 ---
-title: "Why this site exists, and how I will use it"
-description: "A short first note, and a template for the ones that follow."
+title: "Why this site exists and how I will use it"
+description: "A short first note and a template for the ones that follow."
 author: "Laura Salas López"
 date: "2026-09-28"
+categories: [meta]
 ---
 
 ## The question
@@ -11,7 +12,7 @@ I am building toward quantitative finance from a computer science and machine le
 
 ## How I will write notes
 
-Every note follows the same four part shape, because it is the shape quant work is judged by:
+Every note follows the same four part shape:
 
 1. **Question**: what am I trying to find out, in one sentence.
 2. **Method**: the model or approach, with the math stated plainly.
@@ -42,4 +43,4 @@ print(f"1-day 95% VaR estimate: {var_95:.4f}")
 
 ## What comes next
 
-The first real notes will come straight out of my thesis and out of extending the [financial dashboard](../../projects.qmd): a proper backtest write up, a look at how the VaR assumption above fails on fat tailed returns, and a small study on one predictive signal.
+The first real notes will come straight out of my thesis and out of extending the [financial dashboard](../../projects/financial-dashboard.html): a proper backtest write up, a look at how the VaR assumption above fails on fat tailed returns and a small study on one predictive signal.
