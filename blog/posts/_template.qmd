@@ -1,0 +1,38 @@
+---
+title: "Note title here"
+description: "One line summary of the note."
+author: "Laura Salas López"
+date: "2026-01-01"
+categories: [thesis, risk]
+draft: true
+---
+
+<!--
+HOW TO USE THIS TEMPLATE
+1. Copy this file to blog/posts/your-topic.qmd
+2. Fill in the title, date and categories above.
+3. Write the four sections below.
+4. When it is ready, set draft: false (or delete that line) and push.
+This file itself (starting with "_") is never published.
+-->
+
+## Question
+
+What I am trying to find out, in one sentence.
+
+## Method
+
+The model or approach, with the math stated plainly. Use $...$ for inline math, $$...$$ for display equations, and fenced code blocks for code:
+
+```python
+# example
+import numpy as np
+```
+
+## Result
+
+What happened, with a number or a chart.
+
+## Limitations
+
+What I did not test, and where this would break.
