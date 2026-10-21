@@ -38,7 +38,7 @@ Why it matters: sequential decision making under an adversary, with search, prun
 
 ## Automated planning engine (PDDL)
 
-A planning engine in the Fast Downward tradition, with A star search optimization, heuristic pruning and state space reduction.
+A planning engine in the Fast Downward tradition, with A* search optimization, heuristic pruning and state space reduction.
 
 Why it matters: heuristic search and state space reasoning are core algorithmic tools, and this demonstrates them end to end.
 
