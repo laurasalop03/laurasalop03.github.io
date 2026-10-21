@@ -33,7 +33,9 @@ website:
     image: assets/profile.jpg
     card-style: summary
   page-footer:
-    center: "Built with Quarto. Source on GitHub."
+    left: "&copy; 2026 Laura"
+    center: "Built with [Quarto](https://quarto.org). Source on [GitHub](https://github.com/laurasalop03/laurasalop03.github.io)."
+    right: "[LinkedIn](https://www.linkedin.com/in/laura-salas-l%C3%B3pez-3ba7442ba) | [Email](mailto:laurasalop@hotmail.com)"
 
 format:
   html:
