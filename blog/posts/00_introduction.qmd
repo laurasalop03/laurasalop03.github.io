@@ -1,0 +1,27 @@
+---
+title: "Introduction: Research, Code and Quantitative Finance"
+description: "Why I built this space and what to expect."
+author: "Laura Salas López"
+date: "2026-10-21"
+categories: [meta]
+---
+
+## The Goal
+
+I am coming from a background in Computer Science and Mathematics, building toward a career in quantitative research and algorithmic trading. While academic coursework provides the theoretical foundation, the gap I want to close here is visible, hands-on quantitative work: exploring signals, building backtests, evaluating risk and understanding the market mechanics behind them. 
+
+This site is where I document that process in public.
+
+## What to Expect
+
+This space will serve as an open notebook for my research. Instead of following a rigid format, these notes will adapt to whatever problem I am currently trying to solve. Some posts will be deep mathematical explorations, while others might just be practical engineering notes on building financial infrastructure.
+
+Generally, my writing will focus on:
+
+- **Quantitative Research:** Explorations of time-series models, volatility forecasting and market dynamics.
+- **Engineering:** The architecture and technical decisions behind my projects.
+- **Thesis Updates:** Findings from my ongoing Bachelor's thesis on adaptive algorithmic trading systems and concept drift detection.
+
+## Up Next
+
+The first few notes will come straight from my thesis research. I will be covering topics like volatility, risk management and backtesting, among others.
