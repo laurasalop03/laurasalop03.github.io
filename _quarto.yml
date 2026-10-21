@@ -46,6 +46,17 @@ format:
     toc: true
     code-copy: true
     code-overflow: wrap
+    
+comments:
+  giscus:
+    repo: laurasalop03/laurasalop03.github.io
+    repo-id: "R_kgDOUwXU5w"
+    category: Announcements
+    category-id: "DIC_kwDOUwXU584DJPdk"
+    mapping: pathname
+    reactions-enabled: true
+    input-position: top
+    loading: lazy
 
 execute:
   freeze: auto
