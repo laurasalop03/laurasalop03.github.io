@@ -42,6 +42,7 @@ format:
     theme:
        light: cosmo
        dark: cyborg
+    include-in-header: analytics.html
     css: styles.css
     toc: true
     code-copy: true
