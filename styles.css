@@ -13,6 +13,10 @@ h1, h2, h3 {
   color: #555;
 }
 
+.quarto-figure figcaption {
+  text-align: center;
+}
+
 a {
   text-decoration: none;
 }
