@@ -22,7 +22,3 @@ _quarto.yml          Site configuration (title, navigation, theme)
 styles.css           Small style overrides
 .github/workflows/   Build and deploy pipeline
 ```
-
-## Editing locally
-
-If you want to preview before pushing: install the [Quarto CLI](https://quarto.org/docs/get-started/) and run `quarto preview` in this folder.
