@@ -29,6 +29,10 @@ To see whether this pattern also appears in the statistical properties of return
 
 The two autocorrelation plots show a contrast: daily returns have relatively weak autocorrelation, while squared returns show stronger persistence at early lags. This is consistent with the idea that the magnitude of market movements contains information about its recent history.
 
+To check this formally, I ran a *Ljung-Box test* on the earliest part of the data (the fitting period described below). It tests whether the first 10 autocorrelations are jointly zero. The test rejects "no autocorrelation" for squared returns, as expected (statistic 3419.4, p-value effectively zero). It also rejects it for raw returns (statistic 237.6, p ≈ 2 × 10⁻⁴⁵), so the weak autocorrelation in returns is small but not exactly zero.
+
+That second result does not by itself contradict the weak-form EMH. Small but statistically significant autocorrelation is common in daily index returns, and one frequently cited cause is that the 500 stocks in the index do not all trade at the same moment. More importantly, the EMH is about whether past prices allow consistent abnormal profits, and a significant test statistic does not show that. I did not test that question here.
+
 It is an encouraging first clue, but not yet evidence that a forecasting model will perform well. To investigate that, we need to test how accurately different models can predict future volatility using data they have not seen before.
 
 
@@ -61,7 +65,9 @@ The approaches differ mainly in how they use the past. The rolling model conside
 
 Since the true conditional variance of the market is not directly observable, I used **squared returns as a proxy**. However, squared returns are noisy: a single day's movement can differ substantially from the underlying variance, even though squared returns provide information about it over time.
 
-I compared the forecasts using two loss functions: **mean squared error (MSE)** and **quasi-likelihood loss (QLIKE)**. Both measure the difference between the forecast variance and the squared-return proxy, but they penalise forecast errors differently.
+Strictly speaking, a squared return also contains the squared mean return, and the models treat the mean differently: GARCH estimates a constant mean (about 0.08% per day), the rolling variance subtracts the average of its window and EWMA assumes a mean of zero. Since the squared mean is only about 0.006, these differences have a very small effect on the comparison.
+
+I compared the forecasts using two loss functions: **mean squared error (MSE)** and **quasi-likelihood loss (QLIKE)**. Both measure the difference between the forecast variance and the squared-return proxy, but they penalize forecast errors differently: MSE is dominated by the largest errors, while QLIKE penalizes underestimating variance more than overestimating it.
 
 I used the validation period to select model settings, then evaluated the selected approaches on the test period. This allowed me to compare their out-of-sample performance without using the final results to tune the models.
 
@@ -78,18 +84,22 @@ The GARCH model achieved the lowest test loss under both evaluation metrics: MSE
 |---|---:|---:|
 | Historical variance | 11.9478 | 0.9019 |
 | Rolling variance (60 days) | 11.9636 | 0.7607 |
-| EWMA (\(\lambda=0.94\)) | 11.3517 | 0.6852 |
+| EWMA ($\lambda=0.94$) | 11.3517 | 0.6852 |
 | GARCH(1,1) | **11.0121** | **0.6325** |
 
 *Lower values indicate better performance.*
 
-Compared with the historical benchmark, GARCH reduced MSE by around 7.8% and QLIKE by around 29.9%. On this test period, it therefore provided the best forecasts of the four approaches under both metrics.
+Compared with the historical benchmark, GARCH reduced MSE by around 7.8% and lowered QLIKE from 0.9019 to 0.6325. On this test period, it therefore provided the best forecasts of the four approaches under both metrics.
+
+I report the QLIKE change as a difference rather than a percentage on purpose. QLIKE contains the logarithm of the forecast, so if returns were measured in decimals instead of percentage points, every QLIKE value would shift by the same constant. The differences between models would stay the same, but the percentages would change. MSE does not have this problem, because changing units rescales all its values by the same factor.
+
+Is GARCH's lead over EWMA, the closest competitor, more than luck? To check, I used a *Diebold–Mariano-style test*. It takes the daily difference in QLIKE between the two models and tests whether its average is zero, allowing for the fact that these differences are correlated over time. GARCH's average daily QLIKE was 0.0528 lower, with p-values between 0.012 and 0.015 for the three settings I tried (5, 10 and 20 lags). So, on this test period, the difference is statistically significant at the 5% level.
 
 The results also show why the choice of evaluation metric matters. The rolling model achieved a lower QLIKE than the historical benchmark, but its MSE was slightly higher. A model's ranking can therefore depend on how forecast errors are measured.
 
 ### What do the forecasts look like?
 
-The loss metrics summarise performance across the test period, but they don't tell us how the forecasts behave over time. For that, we can compare the predicted variance with squared daily returns.
+The loss metrics summarize performance across the test period, but they don't tell us how the forecasts behave over time. For that, we can compare the predicted variance with squared daily returns.
 
 ![Variance forecasts compared with squared daily returns.](../../assets/blog/01_volatility_clustering/forecasts_vs_squared_ret.png){#fig-forecasts width=100%}
 
@@ -97,7 +107,7 @@ As shown in @fig-forecasts, squared returns fluctuate considerably from one day 
 
 The important caveat is that we cannot observe the market's true conditional variance directly. Squared returns provide a noisy proxy: they contain information about variance, but an individual observation can differ substantially from it. The forecasts should therefore be assessed across the test period, rather than judged by whether they match every individual spike.
 
-Overall, GARCH performed best among the four approaches in this experiment. This is evidence that modelling the persistence of variance can improve forecasts, although the result applies to this sample, these models and the evaluation methods used. It does not establish that GARCH will always outperform simpler alternatives.
+Overall, GARCH performed best among the four approaches in this experiment. This is evidence that modeling the persistence of variance can improve forecasts, although the result applies to this sample, these models and the evaluation methods used. It does not establish that GARCH will always outperform simpler alternatives.
 
 
 ## Do the results change in turbulent markets?
@@ -116,12 +126,12 @@ Importantly, the threshold was determined using training data and kept fixed thr
 
 | Regime | Observations | GARCH QLIKE | EWMA QLIKE |
 |---|---:|---:|---:|
-| Calm | 769 | 0.5052 | 0.5515 |
-| Turbulent | 75 | 1.9368 | 2.0569 |
+| Calm | 769 | 0.5053 | 0.5515 |
+| Turbulent | 75 | 1.9362 | 2.0569 |
 
 GARCH achieved a lower QLIKE loss in both regimes. Its advantage was therefore not limited to the overall result: it also performed better than EWMA when the market was classified as turbulent.
 
-However, the size of that advantage deserves a closer look. The absolute difference in QLIKE was larger during turbulent periods, but relative to EWMA's loss, the improvement was smaller. The turbulent regime also contained far fewer observations, so its average loss is based on a much smaller sample.
+However, the size of that advantage deserves a closer look. GARCH's average QLIKE was 0.1208 lower than EWMA's in turbulent periods and 0.0462 lower in calm ones. The turbulent regime also contained far fewer observations, so its average loss is based on a much smaller sample.
 
 These results are encouraging, but they should be interpreted as descriptive rather than conclusive evidence that GARCH is better under all market conditions. A more extensive analysis would be needed to determine whether the difference between regimes is statistically meaningful and whether the pattern persists in other periods.
 
@@ -130,7 +140,7 @@ These results are encouraging, but they should be interpreted as descriptive rat
 
 The main takeaway from this experiment is that **volatility clustering is more than a visual pattern in historical returns**. The autocorrelation of squared returns suggests that the magnitude of market movements contains persistence, and the forecasting results show that this structure can be useful for estimating future variance.
 
-Among the four approaches I compared, **GARCH achieved the lowest out-of-sample MSE and QLIKE** on the test period. It also outperformed EWMA in both the calm and turbulent regimes I examined. This suggests that explicitly modelling how variance evolves over time can be useful for volatility forecasting, at least in this setting.
+Among the four approaches I compared, **GARCH achieved the lowest out-of-sample MSE and QLIKE** on the test period, and its QLIKE advantage over EWMA was statistically significant at the 5% level. It also outperformed EWMA in both the calm and turbulent regimes I examined. This suggests that explicitly modeling how variance evolves over time can be useful for volatility forecasting, at least in this setting.
 
 However, these findings come with several limitations.
 
