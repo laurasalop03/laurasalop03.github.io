@@ -41,7 +41,7 @@ If you are here to gauge whether I can do quantitative work, the [Projects](proj
 
 ::: {.card .mb-3}
 ::: {.card-body}
-##### Financial Dashboard, live
+### Financial Dashboard, live
 
 An interactive dashboard for market analysis: technical analysis, strategy backtesting, risk metrics (Value at Risk, Beta) and price forecasting. It runs live in the browser.
 

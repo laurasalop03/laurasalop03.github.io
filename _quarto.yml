@@ -41,8 +41,8 @@ website:
 format:
   html:
     theme:
-       light: cosmo
-       dark: cyborg
+       light: [cosmo, theme.scss]
+       dark: [darkly, theme.scss, theme-dark.scss]
     include-in-header: analytics.html
     css: styles.css
     toc: true

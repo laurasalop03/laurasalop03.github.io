@@ -1,0 +1,10 @@
+// Dark-mode overrides, layered after darkly and theme.scss (see _quarto.yml).
+
+/*-- scss:defaults --*/
+
+// A lighter tint of the same ink blue, readable on the dark background.
+$primary: #8fb8e6;
+// darkly colours links green by default; keep them on the accent.
+$link-color: #8fb8e6;
+// Neutral navbar, slightly darker than the page.
+$navbar-bg: #1a1a1a;

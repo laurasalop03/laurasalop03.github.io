@@ -1,0 +1,108 @@
+// Site theme shared by light and dark mode (see `format: html: theme` in _quarto.yml).
+// Light mode: cosmo + this file. Dark mode: darkly + this file + theme-dark.scss.
+// Colours use Sass variables, so every rule adapts to the mode it is compiled for.
+
+/*-- scss:defaults --*/
+
+// Fonts: Source Sans 3 for the interface and headings, Source Serif 4 for reading text.
+$web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" !default;
+$font-family-sans-serif: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: "Source Serif 4", Georgia, "Times New Roman", serif !default;
+$headings-font-family: $font-family-sans-serif !default;
+$headings-font-weight: 600 !default;
+
+// Accent: a deep ink blue (white text on it has a contrast of about 8.6:1).
+$primary: #1f4f82 !default;
+$link-color: $primary !default;
+
+// Neutral navbar; the accent is kept for links, buttons and tags.
+$navbar-bg: #f8f9fa !default;
+
+// Button text picks dark or light automatically to keep at least 4.5:1 contrast.
+$min-contrast-ratio: 4.5 !default;
+
+/*-- scss:rules --*/
+
+// Reading text in serif; navigation, headings, buttons and tables stay sans-serif.
+#quarto-document-content {
+  p, li, blockquote, dd {
+    font-family: $font-family-serif;
+    line-height: 1.65;
+  }
+
+  // Page titles, subtitles and descriptions stay sans-serif.
+  #title-block-header p {
+    font-family: $font-family-sans-serif;
+  }
+}
+
+// Secondary (outline) buttons follow the text colour, so they stay visible in both modes.
+.btn-outline-secondary {
+  --bs-btn-color: #{$body-color};
+  --bs-btn-border-color: #{rgba($body-color, 0.45)};
+  --bs-btn-hover-color: #{$body-bg};
+  --bs-btn-hover-bg: #{$body-color};
+  --bs-btn-hover-border-color: #{$body-color};
+}
+
+// Links in running text are underlined (subtly), so they don't rely on colour alone.
+#quarto-document-content {
+  p, li, td, dd {
+    a:not(.btn) {
+      text-decoration: underline;
+      text-decoration-color: rgba($link-color, 0.35);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+
+      &:hover {
+        text-decoration-color: $link-color;
+      }
+    }
+  }
+}
+
+// Results tables: aligned digits, lighter row lines, a firmer header line.
+#quarto-document-content .table {
+  font-variant-numeric: tabular-nums lining-nums;
+
+  > :not(caption) > * > * {
+    border-bottom-color: rgba($body-color, 0.12);
+  }
+
+  > thead > tr > th {
+    border-bottom: 2px solid rgba($body-color, 0.35);
+    font-weight: 600;
+  }
+}
+
+// Cards (homepage "Featured" and "Latest Article").
+.card {
+  border-radius: 0.5rem;
+
+  .card-title,
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $headings-color;
+  }
+}
+
+// Category tags: on posts, in the Notes listing and in its sidebar.
+.quarto-title .quarto-categories .quarto-category,
+.quarto-listing div.quarto-post .listing-categories .listing-category {
+  color: $primary;
+  background-color: rgba($primary, 0.08);
+  border: 1px solid rgba($primary, 0.25);
+  border-radius: 999px;
+  padding: 0.15em 0.75em;
+  font-size: 0.8rem;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  opacity: 1;
+}
+
+.quarto-listing div.quarto-post .listing-categories .listing-category:hover {
+  background-color: rgba($primary, 0.16);
+}
