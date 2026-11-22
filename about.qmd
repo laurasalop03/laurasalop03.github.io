@@ -1,5 +1,6 @@
 ---
 title: "About me"
+description-meta: "About Laura Salas López: Computer Science and Mathematics student at the University of Granada moving toward quantitative finance. Background, experience and skills."
 ---
 
 I am a computer science and mathematics student moving toward quantitative finance. My foundation is in machine learning, optimization and algorithms, and I am now focused on applying those tools to markets, risk and trading.

@@ -1,6 +1,7 @@
 ---
 title: "Financial Dashboard"
 subtitle: "Interactive market analysis: technical analysis, backtesting, risk and forecasting"
+description-meta: "An interactive Python and Streamlit dashboard for stock market analysis: technical analysis, SMA strategy backtesting, risk metrics (Alpha, Beta, Value at Risk) and price forecasting. Includes a live demo."
 ---
 
 An interactive dashboard built in Python and Streamlit for stock market analysis, quantitative finance and algorithmic trading simulation. It pulls real market data, runs technical analysis, backtests a strategy, measures risk against the market, and forecasts prices.

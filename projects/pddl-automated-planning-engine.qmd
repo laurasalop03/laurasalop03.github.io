@@ -1,6 +1,7 @@
 ---
 title: "Automated Planning Engine (PDDL)"
 subtitle: "Heuristic search planning with aggressive state-space reduction"
+description-meta: "PDDL planning models for multi-agent logistics and scheduling, solved with Fast Downward, using symmetry breaking and state-space reduction to cut A* search time from 698 seconds to under a minute."
 ---
 
 A PDDL based planning engine for complex multi-agent logistics and scheduling problems, solved with the Fast Downward planning system. The focus is on taming combinatorial explosions through heuristic search and strict state-space reduction. Built for the Intelligent Systems Techniques course (Técnicas de los Sistemas Inteligentes, 2025-26) of the Computer Science and Mathematics double degree at the University of Granada.

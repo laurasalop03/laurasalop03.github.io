@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+description-meta: "Selected projects by Laura Salas López, ordered by relevance to quantitative work: a financial dashboard, machine learning, optimization, search, planning and a compiler."
 ---
 
 Projects are ordered by relevance to quantitative work. Each links to the source on GitHub.

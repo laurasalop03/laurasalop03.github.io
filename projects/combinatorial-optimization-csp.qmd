@@ -1,6 +1,7 @@
 ---
 title: "Combinatorial Optimization and Constraint Programming"
 subtitle: "Modelling and solving CSP and COP in MiniZinc"
+description-meta: "Constraint satisfaction and constrained optimization models in MiniZinc, with symmetry breaking, search space reduction, multi-objective optimization and performance benchmarking."
 ---
 
 A collection of mathematical models solving Constraint Satisfaction Problems (CSP) and Constrained Optimization Problems (COP) with MiniZinc, focused on search space reduction, symmetry breaking and performance benchmarking. Built for the Intelligent Systems Techniques course (Técnicas de los Sistemas Inteligentes, 2025-26) of the Computer Science and Mathematics double degree at the University of Granada.

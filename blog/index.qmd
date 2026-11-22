@@ -1,6 +1,7 @@
 ---
 title: "Notes"
 subtitle: "Short write ups from my thesis and learnings"
+description-meta: "Research notes by Laura Salas López on quantitative finance: questions, methods, results and limitations, with links to the code."
 listing:
   contents: posts
   sort: "date desc"

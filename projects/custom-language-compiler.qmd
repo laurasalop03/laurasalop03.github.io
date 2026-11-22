@@ -1,6 +1,7 @@
 ---
 title: "Custom Language Compiler"
 subtitle: "A compiler and AST engine built from scratch in C/C++ with Flex and Bison"
+description-meta: "A compiler for a custom language built from scratch in C/C++ with Flex and Bison: lexical and syntactic analysis, abstract syntax tree construction and code translation."
 ---
 
 A custom language compiler and parsing engine built from scratch, demonstrating low-level systems engineering, formal grammar validation and memory-safe execution. Built for the Language Processors course (Procesadores del Lenguaje, 2025-26) of the Computer Science and Mathematics double degree at the University of Granada.

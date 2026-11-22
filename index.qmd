@@ -1,9 +1,12 @@
 ---
 title: "Laura Salas López"
 subtitle: "Quantitative methods, machine learning and optimization"
+description-meta: "Laura Salas López, Computer Science and Mathematics student working toward quantitative finance. Projects and research notes in quantitative finance, machine learning and optimization."
+toc: false
 about:
   template: trestles
   image: assets/profile.jpg
+  image-alt: "Portrait of Laura Salas López"
   image-shape: round
   links:
     - icon: github
