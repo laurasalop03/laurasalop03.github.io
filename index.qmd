@@ -15,6 +15,14 @@ about:
     - icon: envelope
       text: Email
       href: "mailto:laurasalop@hotmail.com"
+
+listing:
+  - id: latest-article
+    contents: blog/posts
+    sort: "date desc"
+    type: default
+    template: latest-post.ejs
+    max-items: 1
 ---
 
 I am a computer science and math student working toward quantitative finance. My background is in machine learning, math and algorithms, and I am now applying those methods to finance.
@@ -36,4 +44,9 @@ An interactive dashboard for market analysis: technical analysis, strategy backt
 
 [Open the project](projects/financial-dashboard.qmd){.btn .btn-primary .btn-sm} &nbsp; [Launch the live app](https://my-financial-dashboard.streamlit.app){.btn .btn-outline-secondary .btn-sm}
 :::
+:::
+
+## Latest Article
+
+::: {#latest-article}
 :::

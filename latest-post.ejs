@@ -1,0 +1,29 @@
+
+```{=html}
+<% for (const item of items) { %>
+<div class="card mb-3">
+  <div class="card-body">
+
+    <h5 class="card-title"><%= item.title %></h5>
+
+    <% if (item.date) { %>
+    <p class="text-muted small mb-2">
+      <%= item.date %>
+    </p>
+    <% } %>
+
+    <% if (item.description) { %>
+    <p class="card-text">
+      <%= item.description %>
+    </p>
+    <% } %>
+
+    <a href="<%- item.path %>"
+       class="btn btn-primary btn-sm">
+      Read the article
+    </a>
+
+  </div>
+</div>
+<% } %>
+```
