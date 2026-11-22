@@ -23,11 +23,11 @@ This leads to the main question: **Can patterns in historical returns help us fo
 
 As shown in @fig-returns, daily S&P 500 returns alternate between relatively calm periods and periods with much larger fluctuations. This is known as **volatility clustering**. It suggests that the magnitude of market movements may have some persistence, even when the direction of individual returns is difficult to anticipate.
 
-![Daily S&P 500 returns and squared returns. Large movements appear in clusters, separated by calmer periods.](../../assets/blog/01_volatility_clustering/returns.png){#fig-returns width=100%}
+![Daily S&P 500 returns and squared returns. Large movements appear in clusters, separated by calmer periods.](../../assets/blog/01_volatility_clustering/returns.png){#fig-returns width=100% fig-alt="Two stacked time-series charts from 2010 to 2026: S&P 500 daily log returns in percent (top) and squared daily returns (bottom). Both are mostly calm with occasional bursts of large movements, the largest in early 2020, when returns fall to about minus 13 percent and squared returns reach about 160, with smaller bursts in 2011 and 2025."}
 
 To see whether this pattern also appears in the statistical properties of returns, I compared the *autocorrelation* of daily returns with that of squared returns in @fig-acf. Autocorrelation measures how strongly observations in a time series are related to their past values. In this case, it helps us examine whether past returns, or past squared returns, are associated with current values. The distinction matters: returns describe the direction and size of a market movement, while squared returns place more emphasis on the magnitude of that movement.
 
-![Autocorrelation of daily returns versus squared returns. Squared returns show stronger persistence at early lags.](../../assets/blog/01_volatility_clustering/acf.png){#fig-acf width=100%}
+![Autocorrelation of daily returns versus squared returns. Squared returns show stronger persistence at early lags.](../../assets/blog/01_volatility_clustering/acf.png){#fig-acf width=100% fig-alt="Two autocorrelation plots for lags 1 to 40 with a shaded confidence band. For daily returns (left), the autocorrelations are small, mostly near zero, with a few slightly outside the band. For squared returns (right), they start at about 0.4 to 0.45 at the first lags and decay slowly, staying above the band for many lags."}
 
 The two autocorrelation plots show a contrast: daily returns have relatively weak autocorrelation, while squared returns show stronger persistence at early lags. This is consistent with the idea that the magnitude of market movements contains information about its recent history.
 
@@ -103,7 +103,7 @@ The results also show why the choice of evaluation metric matters. The rolling m
 
 The loss metrics summarize performance across the test period, but they don't tell us how the forecasts behave over time. For that, we can compare the predicted variance with squared daily returns.
 
-![Variance forecasts compared with squared daily returns.](../../assets/blog/01_volatility_clustering/forecasts_vs_squared_ret.png){#fig-forecasts width=100%}
+![Variance forecasts compared with squared daily returns.](../../assets/blog/01_volatility_clustering/forecasts_vs_squared_ret.png){#fig-forecasts width=100% fig-alt="Line chart of squared daily returns (grey) and four variance forecasts over the test period, June 2023 to October 2026. Squared returns spike to about 83 in April 2025. The GARCH (red) and EWMA (green) forecasts rise sharply right after the spike, to about 19 and 9, the 60-day rolling forecast (orange) rises more slowly and stays raised until mid-2025, and the historical variance (blue) is a flat line."}
 
 As shown in @fig-forecasts, squared returns fluctuate considerably from one day to the next, while variance forecasts tend to evolve more smoothly. This is not necessarily a weakness: a single day's return can be unusually large or small even when the underlying conditional variance has changed very little.
 
@@ -122,7 +122,7 @@ To separate the two regimes, I calculated the rolling standard deviation of dail
 
 Importantly, the threshold was determined using training data and kept fixed throughout the test period. This helps avoid using future information to define market conditions.
 
-![Volatility regimes during the test period.](../../assets/blog/01_volatility_clustering/regimes.png){#fig-regimes width=100%}
+![Volatility regimes during the test period.](../../assets/blog/01_volatility_clustering/regimes.png){#fig-regimes width=100% fig-alt="Line chart of trailing 20-day volatility during the test period, June 2023 to October 2026, with a dashed horizontal line at the training-period 75th percentile, about 1.16. Volatility stays mostly between 0.4 and 1.1, crosses the line briefly in August 2024 and around April 2026, and peaks near 3.2 around April and May 2025."}
 
 ### Comparing the models across regimes
 
