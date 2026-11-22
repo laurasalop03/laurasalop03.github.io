@@ -4,6 +4,8 @@ description: "Testing whether volatility clustering can improve out-of-sample va
 author: "Laura Salas López"
 date: "2026-11-23"
 categories: [volatility, forecasting]
+image: ../../assets/blog/01_volatility_clustering/forecasts.png
+image-alt: "Variance forecasts from historical variance, rolling variance, EWMA and GARCH on the S&P 500 test period."
 ---
 
 ## The question: can volatility be predicted?

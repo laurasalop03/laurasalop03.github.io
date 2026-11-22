@@ -27,10 +27,10 @@ website:
     location: navbar
     type: overlay
   open-graph:
-    image: assets/profile.jpg
+    image: /assets/profile.jpg
     locale: en_US
   twitter-card:
-    image: assets/profile.jpg
+    image: /assets/profile.jpg
     card-style: summary
   page-footer:
     left: "&copy; 2026 Laura"
