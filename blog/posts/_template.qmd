@@ -4,6 +4,8 @@ description: "One line summary of the note."
 author: "Laura Salas López"
 date: "2026-01-01"
 categories: [thesis, risk]
+image: ../../assets/blog/NN_topic/preview.png
+image-alt: "Describe what the preview chart shows."
 draft: true
 ---
 
@@ -12,7 +14,13 @@ HOW TO USE THIS TEMPLATE
 1. Copy this file to blog/posts/your-topic.qmd
 2. Fill in the title, date and categories above.
 3. Write the four sections below.
-4. When it is ready, set draft: false (or delete that line) and push.
+4. Make the LinkedIn preview image: assets/blog/NN_topic/preview.png, exactly
+   1200x627 px, solid (not transparent) background. Transparent figures show
+   up black on LinkedIn.
+5. When it is ready, set draft: false (or delete that line) and push.
+6. After the deploy finishes, paste the post URL into
+   https://www.linkedin.com/post-inspector/ and check the image shows.
+   Only then share it: LinkedIn caches the first preview for about 7 days.
 This file itself (starting with "_") is never published.
 -->
 
