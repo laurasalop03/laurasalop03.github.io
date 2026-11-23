@@ -25,12 +25,14 @@ blog/
   posts/_metadata.yml  Settings shared by all notes (comments)
   posts/_template.qmd  Skeleton for a new note (not published)
 assets/                Profile photo, favicon and figures for the notes
-latest-post.ejs        Template for the "Latest Article" card on the home page
 _quarto.yml            Site configuration (title, navigation, theme, metadata)
-theme.scss             Shared theme: fonts, accent colour, styling
-theme-dark.scss        Dark mode colours
-styles.css             Small style overrides
-analytics.html         GoatCounter analytics snippet
+styles/
+  theme.scss           Shared theme: fonts, accent colour, styling
+  theme-dark.scss      Dark mode colours
+  styles.css           Small style overrides
+_partials/             Build-only snippets (not published as pages)
+  analytics.html       GoatCounter analytics snippet
+  latest-post.ejs      Template for the "Latest Article" card on the home page
 .github/workflows/     Build and deploy pipeline
 ```
 

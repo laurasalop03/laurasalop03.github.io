@@ -41,12 +41,12 @@ website:
 format:
   html:
     theme:
-       light: [cosmo, theme.scss]
-       dark: [darkly, theme.scss, theme-dark.scss]
+       light: [cosmo, styles/theme.scss]
+       dark: [darkly, styles/theme.scss, styles/theme-dark.scss]
     # Follow the reader's system light/dark setting; the navbar toggle still overrides it.
     respect-user-color-scheme: true
-    include-in-header: analytics.html
-    css: styles.css
+    include-in-header: _partials/analytics.html
+    css: styles/styles.css
     toc: true
     code-copy: true
     code-overflow: wrap

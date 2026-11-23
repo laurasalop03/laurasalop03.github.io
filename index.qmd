@@ -24,7 +24,7 @@ listing:
     contents: blog/posts
     sort: "date desc"
     type: default
-    template: latest-post.ejs
+    template: _partials/latest-post.ejs
     max-items: 1
 ---
 
